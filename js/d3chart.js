@@ -1,4 +1,5 @@
-/*
+/**
+ * =========
  * d3 sample
  * =========
  */
@@ -18,16 +19,16 @@ d3.select('.chart')
     .data(data)
     .enter().append('div')
     .style('width', function (d) {
-        return d * 10 + 'px';
-    })
+               return d * 10 + 'px';
+           })
     .style('background-color', 'steelblue')
     .style('margin', '1px')
     .style('text-align', 'right')
     .style('color', 'white')
     .style('padding', '3px')
     .text(function (d) {
-        return d;
-    });
+              return d;
+          });
 
 var x = d3.scale.linear()
     .domain([0, d3.max(data)])
